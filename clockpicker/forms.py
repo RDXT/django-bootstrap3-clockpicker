@@ -33,5 +33,5 @@ class ClockpickerMixin(object):
     media = property(_get_media)
 
 
-class ClockpickerWidget(ClockpickerMixin, forms.DateTimeInput):
+class ClockpickerWidget(ClockpickerMixin, forms.TimeInput):
     pass
