@@ -23,6 +23,6 @@ $(function () {
                 clockpickerOptions[clockpickerKey] = value;
             }
         });
-        $(el).datetimepicker(clockpickerOptions);
+        $(el).clockpicker(clockpickerOptions);
     });
 });
