@@ -46,3 +46,10 @@ class ClockpickerWidget(forms.TimeInput):
         rendered = super(ClockpickerWidget, self).render(name, value, input_attrs, renderer)
         cpw_attrs = self.build_attrs(self.cpw_attrs)
         return format_html(COMPONENT_TEMPLATE, flatatt(cpw_attrs), rendered, self.glyphicon)
+
+    def _get_media(self):
+        return forms.Media(
+            js=('clockpicker/js/clockpicker_init.js',),
+        )
+
+    media = property(_get_media)
